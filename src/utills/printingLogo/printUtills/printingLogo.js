@@ -2,25 +2,27 @@ import drawer from './drawer';
 const line = '-';
 const star = '*';
 let letterM = '';
-let array = []
+let logoPart1 = [];
+let logoPart2 = [];
+
 
 // printing the upper part of logo
 function printingLogoUpPart(number) {
     const halfRowsLogo = (+number + 1) / 2;
 
     for (let row = 0; row < halfRowsLogo; row++) {
-        //debugger;
+        
         letterM =
             drawer(+number - row, line) +          
             drawer(+number + row * 2, star) +
             drawer(+number - row * 2, line) +
             drawer(+number + row * 2, star) +
             drawer(+number - row, line);      
-        
-        console.log(letterM+letterM);      
-        //debugger; 
+          
+        logoPart1.push(letterM.concat(letterM)); // pushing in array every row of Logo
+              //debugger; 
     }
-    return(array);
+    return(logoPart1);
 }
 
 //printing the lower part of logo
@@ -38,8 +40,9 @@ function printingLogoDownPart(number) {
             drawer(number, star) +
             drawer((number - 1) / 2 - (row), line);
 
-        console.log(letterM + letterM);
+        logoPart2.push(letterM.concat(letterM))  // pushing in array every row of Logo
     }
+    return logoPart2;
 }
 
 export default {printingLogoUpPart,printingLogoDownPart};

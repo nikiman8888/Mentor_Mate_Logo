@@ -13,12 +13,24 @@ class PrintLogo extends Component {
 
     componentDidMount() {
         const { number } = this.props;
-        debugger;
-        if (+number > 2 && +number < 10000){
-            printLogo(+this.props.number);
-        }else{
+        let result = [];  // this array is to fill it with every single row from the logo
+
+        if (+number > 2 && +number < 10000) {
+            const logoParts = printLogo(+number); // get the logo parts
+
+            for (const currentPart in logoParts) {       //looping 2 times to get every single row
+                let arrayOfParts = logoParts[currentPart]; 
+
+                for (const logoRow in arrayOfParts) {
+                    result.push(arrayOfParts[logoRow])
+                }   
+            }
+
+            this.setState({ logo: result}); // and set state with final result
+
+        } else {
             console.log('not correct')
-        }        
+        }
     }
 
     render() {
@@ -26,7 +38,11 @@ class PrintLogo extends Component {
 
         return (
             <div className='logo-container'>
-                {logo}
+                {   // start to rendering every single row
+                logo && logo.map(row =>{
+                return <p>{row}</p>
+                })
+                }
             </div>
         )
     }
