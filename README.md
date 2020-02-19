@@ -17,4 +17,4 @@ Runs the app in the development mode.<br />
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 
-The App still is under construction. May be there are some bugs.
+The App still is under construction. Still  have a bugs to fix it.
