@@ -10,7 +10,6 @@ class PrintLogo extends Component {
         }
     }
 
-
     componentDidMount() {
         const { number } = this.props;
         let result = [];  // this array is to fill it with every single row from the logo
@@ -27,10 +26,7 @@ class PrintLogo extends Component {
             }
 
             this.setState({ logo: result}); // and set state with final result
-
-        } else {
-            console.log('not correct')
-        }
+        } 
     }
 
     render() {

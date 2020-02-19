@@ -9,7 +9,7 @@ class Main extends Component {
         this.state = {
             number: '',
             error: '',
-            success: ''
+            success: false
         }
     }
 
@@ -24,11 +24,12 @@ class Main extends Component {
         if (errorHandler(this.state.number)) {
             const message = errorHandler(this.state.number);
             this.setState({ error: message });
+            this.setState({success:false});
             
         } else {
-            this.setState({ success: 'Print the logo' })         
+            this.setState({ success: true })         
         }
-        //this.setState({ number: '' });
+       
     }
 
     render() {
