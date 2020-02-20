@@ -9,9 +9,16 @@ class PrintLogo extends Component {
             logo: ''
         }
     }
+    componentWillMount(){
+        const { inputChanged } = this.props;
+        if(inputChanged){
+            this.setState({logo:''})
+        }
+    }
 
     componentDidMount() {
-        const { number } = this.props;
+        const { number,inputChanged } = this.props;
+        
         let result = [];  // this array is to fill it with every single row from the logo
 
         if (+number > 2 && +number < 10000) {
@@ -36,7 +43,7 @@ class PrintLogo extends Component {
             <div className='logo-container'>
                 {   // start to rendering every single row
                 logo && logo.map(row =>{
-                return <p>{row}</p>
+                return <p key = {row}>{row}</p>
                 })
                 }
             </div>

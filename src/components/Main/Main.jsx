@@ -9,13 +9,19 @@ class Main extends Component {
         this.state = {
             number: '',
             error: '',
-            success: false
+            success: false,
+            inputChanged:false
         }
     }
 
     changeHandler = (e) => {
+        this.setState({inputChanged:true})
+        this.setState({success:''})
         this.setState({ error: '' });
         this.setState({ number: e.target.value });
+    }
+    clearInputHandler = ()=>{
+        this.setState({number:''})
     }
 
     submitHandler = (e) => {
@@ -29,11 +35,10 @@ class Main extends Component {
         } else {
             this.setState({ success: true })         
         }
-       
     }
 
     render() {
-        const { error, success, number } = this.state;
+        const { error, success, number,inputChanged } = this.state;
         console.log(number)
         return (
             <div className='main-container'>
@@ -48,10 +53,10 @@ class Main extends Component {
                         onChange={this.changeHandler}
                         onBlur={this.changeHandler}
                     />
-                    <button type='submit' >Push</button>
+                    <button type='submit'  >Push</button>
                 </form>
                 {error && <p>{error}</p>}
-                {success && <PrintLogo number = {number}/>}
+                {success && <PrintLogo number = {number} inputChanged = {inputChanged}/>}
             </div>
         )
     }
