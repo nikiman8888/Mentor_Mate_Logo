@@ -10,7 +10,6 @@ class Main extends Component {
             number: '',
             error: '',
             success: false,
-            inputChanged:false
         }
     }
 
@@ -38,7 +37,7 @@ class Main extends Component {
     }
 
     render() {
-        const { error, success, number,inputChanged } = this.state;
+        const { error, success, number} = this.state;
         console.log(number)
         return (
             <div className='main-container'>
@@ -57,7 +56,7 @@ class Main extends Component {
                     <button type='submit'  >Push</button>
                 </form>
                 {error && <p>{error}</p>}
-                {success && <PrintLogo number = {number} inputChanged = {inputChanged}/>}
+                {success && <PrintLogo number = {number}/>}
             </div>
         )
     }
