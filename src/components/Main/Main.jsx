@@ -41,7 +41,7 @@ class Main extends Component {
         console.log(number)
         return (
             <div className='main-container'>
-                <h3>There are some bugs at the moment , will be cleared very soon.</h3>
+                <h3>The App is still  under construction :)</h3>
                 <form onSubmit={this.submitHandler}>
                     <label htmlFor='number'>Input a number</label>
                     <input
