@@ -10,15 +10,9 @@ class PrintLogo extends Component {
             logo: ''
         }
     }
-    componentWillMount() {
-        const { inputChanged } = this.props;
-        console.log(this.props);
-        console.log(this.state)
-    }
-
     componentDidMount() {
         const { number, inputChanged } = this.props;
-        debugger;
+        //debugger;
 
         let result = [];  // this array is to fill it with every single row from the logo
         debugger;
@@ -29,9 +23,7 @@ class PrintLogo extends Component {
                 let arrayOfParts = logoParts[currentPart];
 
                 for (const logoRow in arrayOfParts) {
-
                     result.push(arrayOfParts[logoRow]);
-                    debugger;
                 }
             }
 
