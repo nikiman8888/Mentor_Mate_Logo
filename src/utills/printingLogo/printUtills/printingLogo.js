@@ -22,7 +22,9 @@ function printingLogoUpPart(number) {
         logoPart1.push(letterM.concat(letterM)); // pushing in array every row of Logo
               //debugger; 
     }
-    return(logoPart1);
+    let result = logoPart1;
+    logoPart1 = [];
+    return result;
 }
 
 //printing the lower part of logo
@@ -42,7 +44,9 @@ function printingLogoDownPart(number) {
 
         logoPart2.push(letterM.concat(letterM))  // pushing in array every row of Logo
     }
-    return logoPart2;
+    let result = logoPart2;
+    logoPart2 = [];
+    return result;
 }
 
 export default {printingLogoUpPart,printingLogoDownPart};

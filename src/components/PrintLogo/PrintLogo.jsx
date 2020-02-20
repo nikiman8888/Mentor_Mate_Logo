@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './PrintLogo.css';
 import printLogo from '../../utills/printingLogo/index';
+import LogoRow from '../Logo/LogoRow';
 
 class PrintLogo extends Component {
     constructor(props) {
@@ -9,31 +10,33 @@ class PrintLogo extends Component {
             logo: ''
         }
     }
-    componentWillMount(){
+    componentWillMount() {
         const { inputChanged } = this.props;
-        if(inputChanged){
-            this.setState({logo:''})
-        }
+        console.log(this.props);
+        console.log(this.state)
     }
 
     componentDidMount() {
-        const { number,inputChanged } = this.props;
-        
+        const { number, inputChanged } = this.props;
+        debugger;
+
         let result = [];  // this array is to fill it with every single row from the logo
-
+        debugger;
         if (+number > 2 && +number < 10000) {
-            const logoParts = printLogo(+number); // get the logo parts
-
+            let logoParts = printLogo(+number); // get the logo parts
+            debugger;
             for (const currentPart in logoParts) {       //looping 2 times to get every single row
-                let arrayOfParts = logoParts[currentPart]; 
+                let arrayOfParts = logoParts[currentPart];
 
                 for (const logoRow in arrayOfParts) {
-                    result.push(arrayOfParts[logoRow])
-                }   
+
+                    result.push(arrayOfParts[logoRow]);
+                    debugger;
+                }
             }
 
-            this.setState({ logo: result}); // and set state with final result
-        } 
+            this.setState({ logo: result }); // and set state with final result
+        }
     }
 
     render() {
@@ -42,9 +45,9 @@ class PrintLogo extends Component {
         return (
             <div className='logo-container'>
                 {   // start to rendering every single row
-                logo && logo.map(row =>{
-                return <p key = {row}>{row}</p>
-                })
+                    logo && logo.map(row => {
+                        return <LogoRow row={row} />
+                    })
                 }
             </div>
         )
