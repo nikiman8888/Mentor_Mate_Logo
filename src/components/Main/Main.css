@@ -1,16 +1,17 @@
 .main-container {
-    width: 100%;
-    
+    width: 100%;  
 }
 
 .main-container h3 {
     text-align: center;
     color: rgb(134, 135, 206);
 }
+
 .main-container label {
     margin-left: 15px;
     font-size: 20px;
 }
+
 .main-container input {
     margin-left: 5px;
     font-size: 15px;
@@ -23,11 +24,10 @@
     border-radius: 3px;
     background-color: lightgrey;
     color: black;
-   
 }
 
 .main-container button:hover {
-    
+    cursor: pointer;
     background-color:rgb(132, 151, 235);
     color: white;
 }
