@@ -6,8 +6,6 @@ function errorHandler(number) {
     if(+number%2 === 0){
         return 'Number should be odd number';
     }
-   //if(typeof(number) !== number){
-   //    return 'Dude this is not hacking test'
-   //}
+   
 }
 export default errorHandler;

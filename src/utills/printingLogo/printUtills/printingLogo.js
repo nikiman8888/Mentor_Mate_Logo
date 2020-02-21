@@ -20,11 +20,11 @@ function printingLogoUpPart(number) {
             drawer(+number - row, line);      
           
         logoPart1.push(letterM.concat(letterM)); // pushing in array every row of Logo
-              //debugger; 
     }
-    let result = logoPart1;
-    logoPart1 = [];
-    return result;
+
+    let result = logoPart1;         // copy the array
+    logoPart1 = [];                 // clear the array for future inputs
+    return result;                  // send the copy to the component 
 }
 
 //printing the lower part of logo
@@ -44,9 +44,10 @@ function printingLogoDownPart(number) {
 
         logoPart2.push(letterM.concat(letterM))  // pushing in array every row of Logo
     }
-    let result = logoPart2;
-    logoPart2 = [];
-    return result;
+    
+    let result = logoPart2; // copy the array
+    logoPart2 = [];         // clear the array for future inputs
+    return result;          // send the copy to the component 
 }
 
 export default {printingLogoUpPart,printingLogoDownPart};

@@ -12,8 +12,6 @@ class PrintLogo extends Component {
     }
     componentDidMount() {
         const { number } = this.props;
-        //debugger;
-
         let result = [];  // this array is to fill it with every single row from the logo
 
         if (+number > 2 && +number < 10000) {
@@ -36,10 +34,11 @@ class PrintLogo extends Component {
 
         return (
             <div className='logo-container' >
-                 {logo && logo.map(row => {
+                {
+                logo && logo.map(row => {
                     return <LogoRow row={row} />
                 })
-            }
+                }
             </div>
         )
     }

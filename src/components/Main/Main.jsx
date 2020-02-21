@@ -14,7 +14,7 @@ class Main extends Component {
     }
 
     changeHandler = (e) => {
-        this.setState({inputChanged:true})
+        
         this.setState({success:''})
         this.setState({ error: '' });
         this.setState({ number: e.target.value });

@@ -6,13 +6,10 @@ function logo(number) {
     if (number > 2 && number < 10000 && number % 2 !== 0) {
 
         return {
-            part1: printingLogo.printingLogoUpPart(+number),
-            part2: printingLogo.printingLogoDownPart(+number)
+            part1: printingLogo.printingLogoUpPart(+number),  // upper part of logo
+            part2: printingLogo.printingLogoDownPart(+number) // lower part of logo
         }
-
-    } else {
-        return console.log('Please put an odd number between 2 and 10000');
-    }
+    } 
 }
 
 export default logo;

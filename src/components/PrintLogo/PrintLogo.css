@@ -1,9 +1,12 @@
 .logo-container {
-    margin-top: 25px;  
+    margin-top: 25px; 
+    margin-left: 20px; 
     width: 1000000px;
+    border: lightcoral;
     
 }
 .logo-container p {
     margin-top: -5px;
     margin-bottom: -5px;
+    font-size: 10px;
 }
