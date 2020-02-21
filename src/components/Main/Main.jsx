@@ -55,7 +55,7 @@ class Main extends Component {
                     />
                     <button type='submit'  >Push</button>
                 </form>
-                {error && <p>{error}</p>}
+                {error && <p className ='error'>{error}</p>}
                 {success && <PrintLogo number={number} />}
             </div>
         )
