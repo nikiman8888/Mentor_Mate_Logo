@@ -35,9 +35,9 @@ class PrintLogo extends Component {
         return (
             <div className='logo-container' >
                 {
-                logo && logo.map(row => {
-                    return <LogoRow row={row} />
-                })
+                    logo && logo.map(row => {
+                        return <LogoRow row={row} />
+                    })
                 }
             </div>
         )

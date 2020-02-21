@@ -14,31 +14,31 @@ class Main extends Component {
     }
 
     changeHandler = (e) => {
-        
-        this.setState({success:''})
+        this.setState({ success: '' })
         this.setState({ error: '' });
         this.setState({ number: e.target.value });
     }
-    clearInputHandler = ()=>{
-        this.setState({number:''})
+
+    clearInputHandler = () => {
+        this.setState({ number: '' })
     }
 
     submitHandler = (e) => {
         e.preventDefault();
-        
+
         if (errorHandler(this.state.number)) {
             const message = errorHandler(this.state.number);
             this.setState({ error: message });
-            this.setState({success:false});
-            
+            this.setState({ success: false });
+
         } else {
-            this.setState({ success: true })         
+            this.setState({ success: true })
         }
     }
 
     render() {
-        const { error, success, number} = this.state;
-        console.log(number)
+        const { error, success, number } = this.state;
+        
         return (
             <div className='main-container'>
                 <h3>The App is still  under construction :)</h3>
@@ -56,7 +56,7 @@ class Main extends Component {
                     <button type='submit'  >Push</button>
                 </form>
                 {error && <p>{error}</p>}
-                {success && <PrintLogo number = {number}/>}
+                {success && <PrintLogo number={number} />}
             </div>
         )
     }
