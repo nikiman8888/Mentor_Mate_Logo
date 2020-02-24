@@ -48,6 +48,7 @@ class Main extends Component {
                         type='number'
                         id='number'
                         value={number}
+                        placeholder = 'put a number'
                         autoFocus
                         required
                         onChange={this.changeHandler}
