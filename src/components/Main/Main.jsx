@@ -41,7 +41,7 @@ class Main extends Component {
         
         return (
             <div className='main-container'>
-                <h3>The App is still  under construction :)</h3>
+                <h3>Recommended input is not more than 2000 for faster loading</h3>
                 <form onSubmit={this.submitHandler}>
                     <label htmlFor='number'>Input a number</label>
                     <input

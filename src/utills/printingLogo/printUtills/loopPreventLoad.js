@@ -3,7 +3,7 @@ let result = [];
 let result2 = [];
 const line = '-';
 const star = '*';
-
+// this function prevent a bit the loading proccess if the input number is too big
 function loopPreventLoadUpperPart(number, row, count) {
     let arrayContainer = [];
     for (let loopRow = row; loopRow < count; loopRow++) {
